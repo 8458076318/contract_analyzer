@@ -50,58 +50,41 @@ It enables:
 ```bash
 git clone <your-repo-link>
 cd contract_analyzer
+```
 2️⃣ Create virtual environment
+```bash
 python -m venv venv
-```venv\Scripts\activate   # Windows
+venv\Scripts\activate   # Windows
 ```
 3️⃣ Install dependencies
-```pip install -r requirements.txt
-```
+```bash
 pip install -r requirements.txt
-```python manage.py makemigrations
+```
+4️⃣ Global Ask (Dynamic)
+```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 5️⃣ Run server
-```python manage.py runserver```
-5️⃣ Run server
-```python manage.py runserver
+```bash
+python manage.py runserver
 ```
 📂 Dataset Setup
-Download CUAD dataset:
-https://github.com/TheAtticusProject/cuad
-Extract:
-data/train_separate_questions.json
-Place inside project:
-contract_analyzer/data/
-📥 Ingest Data
-python manage.py shell
-from contracts.services.ingestion import ingest_cuad_contracts
-ingest_cuad_contracts(limit=20)
-🔗 API Endpoints
-1️⃣ List Contracts
-GET /contracts/
-2️⃣ Get Clauses
-GET /contracts/<id>/clauses/
-3️⃣ Ask Question (Contract-specific)
-POST /contracts/<id>/ask/
 
-Body:
-
-{
-  "question": "What is the governing law?"
-}
-📂 Dataset Setup
-Download CUAD dataset:
+- Download CUAD dataset:
 https://github.com/TheAtticusProject/cuad
-Extract:
+
+- Extract:
 data/train_separate_questions.json
-Place inside project:
+- Place inside project:
 contract_analyzer/data/
-📥 Ingest Data
-python manage.py shell
+- 📥 Ingest Data
+```python manage.py shell
 from contracts.services.ingestion import ingest_cuad_contracts
-ingest_cuad_contracts(limit=20)
-🔗 API Endpoints
+ingest_cuad_contracts(limit=20)```
+
+### 🔗 API Endpoints
+
 1️⃣ List Contracts
 GET /contracts/
 2️⃣ Get Clauses
