@@ -97,3 +97,11 @@ Body:
 {
   "question": "What is the governing law?"
 }
+4️⃣ Global Ask (Dynamic)
+POST /contracts/ask/
+
+Body:
+
+{
+  "question": "What is cap on liability?"
+}
